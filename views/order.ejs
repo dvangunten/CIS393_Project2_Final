@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <a href="home">Home</a> 
+    <a href="menu">Menu</a> 
+    <a href="reservation">Make Reservations</a> 
+    <a href="order">Order Online</a> 
+    <a href="review">Leave A Review</a> 
+    <a href="aboutus">About Us</a>
+</nav>
+
+<h1>
+    Online Ordering
+</h1>
+<form method="post" action="insertorder">
+
+    <label class="order" for="foodItem">Select Food Item:</label>
+    <select class="order" id="foodItem" name="foodItem" required>
+        <option value="">Select Food Item</option>
+        <option class="order" value="1">Classic Burger</option>
+        <option class="order" value="2">Magherita Pizza</option>
+        <option class="order" value="3">Philly Cheesesteak</option>
+        
+    </select>
+    <br><br>
+
+    <label class="order" for="quantity">Quantity:</label>
+    <input class="order" type="number" id="quantity" name="quantity" min="1" required>
+    <br><br>
+
+    <label class="order" for="customerName">Name:</label>
+    <input class="order" type="text" id="customerName" name="customerName" required>
+    <br><br>
+
+    <label class="order" for="customerEmail">Email:</label>
+    <input class="order" type="email" id="customerEmail" name="customerEmail" required>
+    <br><br>
+
+    <label class="order" for="customerAddress">Delivery Address:</label>
+    <textarea class="order" id="customerAddress" name="customerAddress" rows="4" required></textarea>
+    <br><br><br><br>
+
+    <input type="submit" value="Place Order">
+</form>
+
+<h1>Search for an order here</h1>
+<h3>Enter email associated with your order</h3>
+<form action="searchorder" method="POST">
+    <label for="searchEmail">Email Address:</label>
+    <input type="email" id="searchEmail" name="searchEmail" required>
+    <button type="submit">Search</button>
+</form>
+
+</body>
+</html>
